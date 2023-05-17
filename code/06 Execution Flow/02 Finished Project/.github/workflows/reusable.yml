@@ -1,5 +1,5 @@
 name: Reusable Deploy
-on: 
+on:
   workflow_call:
     inputs:
       artifact-name:
@@ -11,8 +11,8 @@ on:
       result:
         description: The result of the deployment operation
         value: ${{ jobs.deploy.outputs.outcome }}
-    # secrets:
-      # some-secret:
+        # secrets:
+        # some-secret:
         # required: false
 jobs:
   deploy:

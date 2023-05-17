@@ -1,4 +1,4 @@
-import { MongoClient } from 'mongodb';
+import {MongoClient} from 'mongodb';
 
 const clusterAddress = process.env.MONGODB_CLUSTER_ADDRESS;
 const dbUser = process.env.MONGODB_USERNAME;
@@ -11,13 +11,13 @@ const client = new MongoClient(uri);
 console.log('Trying to connect to db');
 
 try {
-  await client.connect();
-  await client.db(dbName).command({ ping: 1 });
-  console.log('Connected successfully to server');
+    await client.connect();
+    await client.db(dbName).command({ping: 1});
+    console.log('Connected successfully to server');
 } catch (error) {
-  console.log('Connection failed.');
-  await client.close();
-  console.log('Connection closed.');
+    console.log('Connection failed.');
+    await client.close();
+    console.log('Connection closed.');
 }
 
 const database = client.db(dbName);

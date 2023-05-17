@@ -11,10 +11,16 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "extends": ["plugin:react/recommended", "plugin:react/jsx-runtime"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime"
+  ],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "semi": [2, "always"]
+    "semi": [
+      2,
+      "always"
+    ]
   },
   "settings": {
     "react": {
